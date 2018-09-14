@@ -11,14 +11,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:onClick="gotoRoundedImageView"
             android:text="异形图片" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:onClick="gotoNineGridLayout"
             android:text="九宫格" />
     </LinearLayout>
