@@ -24,10 +24,11 @@
             app:riv_oval="true" />
 
         <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
+            android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
+            android:scaleType="center"
             android:src="@drawable/photo7"
             app:riv_border_color="#F00"
             app:riv_border_width="2dp"
@@ -39,6 +40,7 @@
             app:riv_oval="false" />
 
         <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
+            android:id="@+id/imageView3"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
@@ -52,6 +54,7 @@
             app:riv_oval="false" />
 
         <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
+            android:id="@+id/imageView4"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -66,8 +69,10 @@
             app:riv_oval="true" />
 
         <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
+            android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:layout_margin="10dp"
             android:background="@color/colorAccent"
             android:padding="10dip"
