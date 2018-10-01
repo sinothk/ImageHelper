@@ -21,5 +21,20 @@
             android:layout_marginTop="10dp"
             android:onClick="gotoNineGridLayout"
             android:text="九宫格" />
+
+
+        <Button
+            android:id="@+id/getCacheBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="计算" />
+
+        <Button
+            android:id="@+id/cacheSizeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="清缓存" />
     </LinearLayout>
 </ScrollView>

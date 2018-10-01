@@ -10,6 +10,27 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top_img" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top_img" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark" />
+
         <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
             android:id="@+id/imageView1"
             android:layout_width="100dp"
@@ -72,16 +93,34 @@
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
             android:layout_margin="10dp"
+            android:adjustViewBounds="true"
             android:background="@color/colorAccent"
             android:padding="10dip"
-            android:scaleType="center"
+            android:scaleType="centerCrop"
             android:src="@drawable/photo7"
             app:riv_border_color="@color/colorPrimaryDark"
             app:riv_border_width="3dip"
             app:riv_corner_radius="30dip"
             app:riv_mutate_background="true"
             app:riv_oval="false" />
+
+        <com.sinothk.helper.image.widget.roundedImageView.RoundedImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:padding="10dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo7"
+            app:riv_border_color="@color/colorPrimaryDark"
+            app:riv_border_width="3dip"
+            app:riv_corner_radius="30dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false" />
+
+
     </LinearLayout>
 </ScrollView>

@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+import com.sinothk.helper.image.loader.ImageLoader;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -60,7 +61,9 @@ public class CustomImageView extends AppCompatImageView {
 
     @Override
     public void onDetachedFromWindow() {
-        Picasso.with(getContext()).cancelRequest(this);
+//        Picasso.with(getContext()).cancelRequest(this);
+//        ImageLoader.clear();
+
         isAttachedToWindow = false;
         setImageBitmap(null);
         super.onDetachedFromWindow();
@@ -70,12 +73,14 @@ public class CustomImageView extends AppCompatImageView {
         if (!TextUtils.isEmpty(url)) {
             this.url = url;
             if (isAttachedToWindow) {
-                Picasso.with(getContext())
-                        .load(url)
-//                        .centerCrop()
-//                        .resize(300,300)
-                        .placeholder(new ColorDrawable(Color.parseColor("#f5f5f5")))
-                        .into(this);
+//                Picasso.with(getContext())
+//                        .load(url)
+////                        .centerCrop()
+////                        .resize(300,300)
+//                        .placeholder(new ColorDrawable(Color.parseColor("#f5f5f5")))
+//                        .into(this);
+
+                ImageLoader.loadNetImg(getContext(), url, this, new ColorDrawable(Color.parseColor("#f5f5f5")));
             }
         }
     }
