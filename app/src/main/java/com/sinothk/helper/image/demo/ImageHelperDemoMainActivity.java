@@ -5,11 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sinothk.helper.image.demo.NineGridLayout.NineGridDemLayoutMainActivity;
 import com.sinothk.helper.image.demo.RoundedImageView.RoundedDemoMainActivity;
+import com.sinothk.helper.image.demo.compress.CompressFilePathMainActivity;
 import com.sinothk.helper.image.loader.ImageLoader;
 
 public class ImageHelperDemoMainActivity extends AppCompatActivity {
@@ -54,5 +54,9 @@ public class ImageHelperDemoMainActivity extends AppCompatActivity {
 
     public void gotoNineGridLayout(View view) {
         startActivity(new Intent(ImageHelperDemoMainActivity.this, NineGridDemLayoutMainActivity.class));
+    }
+
+    public void gotoCompressDemoActivity(View view) {
+        startActivity(new Intent(ImageHelperDemoMainActivity.this, CompressFilePathMainActivity.class));
     }
 }

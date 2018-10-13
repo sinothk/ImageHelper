@@ -1,7 +1,6 @@
 package com.sinothk.helper.image.loader;
 
 import android.graphics.drawable.Drawable;
-
 import com.bumptech.glide.request.target.Target;
 
 /**
@@ -12,5 +11,5 @@ import com.bumptech.glide.request.target.Target;
 public interface OnLoadListener {
     void onResourceReady(Drawable resource, Object model);
 
-    void onLoadFailed(Object model, Target<Drawable> target);
+    void onLoadFailed(Object model, String target);
 }

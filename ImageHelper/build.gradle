@@ -22,6 +22,16 @@ android {
         }
     }
 
+//    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+
+    //引用libs下的资源
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+//            java.srcDirs = ['src/main/java']
+        }
+    }
 }
 
 dependencies {

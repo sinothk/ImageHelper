@@ -192,7 +192,7 @@ public class ImageLoader {
                         @Override
                         public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                             Log.e("loadNetImgWithResize", "onLoadFailed --->" + e);
-                            onLoadListener.onLoadFailed(model, target);
+                            onLoadListener.onLoadFailed(model, e.getMessage());
                             return false;
                         }
 
