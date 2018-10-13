@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.sinothk.helper.image.demo.NineGridLayout.NineGridDemLayoutMainActivity;
 import com.sinothk.helper.image.demo.RoundedImageView.RoundedDemoMainActivity;
 import com.sinothk.helper.image.demo.compress.CompressFilePathMainActivity;
+import com.sinothk.helper.image.demo.selector.ImageSelectorDemoActivity;
 import com.sinothk.helper.image.loader.ImageLoader;
 
 public class ImageHelperDemoMainActivity extends AppCompatActivity {
@@ -58,5 +59,9 @@ public class ImageHelperDemoMainActivity extends AppCompatActivity {
 
     public void gotoCompressDemoActivity(View view) {
         startActivity(new Intent(ImageHelperDemoMainActivity.this, CompressFilePathMainActivity.class));
+    }
+
+    public void gotoImageSelectorDemoActivity(View view) {
+        startActivity(new Intent(ImageHelperDemoMainActivity.this, ImageSelectorDemoActivity.class));
     }
 }

@@ -3,6 +3,7 @@ package com.sinothk.helper.image.loader;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
@@ -70,6 +71,35 @@ public class ImageLoader {
                     .centerCrop()
                     .placeholder(defaultDrawable)
                     .error(defaultDrawable)
+                    .priority(Priority.HIGH)
+                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
+
+            Glide.with(context)
+                    .load(url)
+                    .apply(options)
+                    .thumbnail(0.2f)
+                    .into(imageView);
+        } else {
+            throw new NullPointerException("loadNetImg: context != null");
+        }
+    }
+
+
+    /**
+     * 添加预览图片
+     *
+     * @param context
+     * @param url
+     * @param imageView
+     * @param defaultResId
+     */
+    public static void loadNetImg(Context context, Uri url, ImageView imageView, int defaultResId) {
+        if (context != null) {
+
+            RequestOptions options = new RequestOptions()
+                    .centerCrop()
+                    .placeholder(defaultResId)
+                    .error(defaultResId)
                     .priority(Priority.HIGH)
                     .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
 
