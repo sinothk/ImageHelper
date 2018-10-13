@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.sinothk.helper.image.crop.demo.CropImageDemoMainActivity;
 import com.sinothk.helper.image.demo.NineGridLayout.NineGridDemLayoutMainActivity;
 import com.sinothk.helper.image.demo.RoundedImageView.RoundedDemoMainActivity;
 import com.sinothk.helper.image.demo.compress.CompressFilePathMainActivity;
@@ -63,5 +64,9 @@ public class ImageHelperDemoMainActivity extends AppCompatActivity {
 
     public void gotoImageSelectorDemoActivity(View view) {
         startActivity(new Intent(ImageHelperDemoMainActivity.this, ImageSelectorDemoActivity.class));
+    }
+
+    public void gotoCropImageDemoMainActivity(View view) {
+        startActivity(new Intent(ImageHelperDemoMainActivity.this, CropImageDemoMainActivity.class));
     }
 }
