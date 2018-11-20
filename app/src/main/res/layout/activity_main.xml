@@ -57,6 +57,5 @@
             android:layout_marginTop="20dp"
             android:onClick="gotoCropImageDemoMainActivity"
             android:text="图片剪切" />
-
     </LinearLayout>
 </ScrollView>
