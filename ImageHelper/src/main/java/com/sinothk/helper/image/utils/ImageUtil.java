@@ -2,6 +2,8 @@ package com.sinothk.helper.image.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
@@ -25,7 +27,13 @@ public class ImageUtil {
         return getBlurBitmap(bitmap, radius);
     }
 
-
+    /**
+     * 获得模糊图片
+     *
+     * @param sentBitmap
+     * @param radius
+     * @return
+     */
     public static Bitmap getBlurBitmap(Bitmap sentBitmap, int radius) {
         boolean canReuseInBitmap = false;
 
@@ -573,5 +581,24 @@ public class ImageUtil {
         bitmap.setPixels(pix, 0, w, 0, 0, w, h);
 
         return (bitmap);
+    }
+
+
+    public static Bitmap getBitmap(Drawable drawable) {
+        // 取 drawable 的长宽
+        int w = drawable.getIntrinsicWidth();
+        int h = drawable.getIntrinsicHeight();
+
+        // 取 drawable 的颜色格式
+        Bitmap.Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
+                : Bitmap.Config.RGB_565;
+        // 建立对应 bitmap
+        Bitmap bitmap = Bitmap.createBitmap(w, h, config);
+        // 建立对应 bitmap 的画布
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, w, h);
+        // 把 drawable 内容画到画布中
+        drawable.draw(canvas);
+        return bitmap;
     }
 }

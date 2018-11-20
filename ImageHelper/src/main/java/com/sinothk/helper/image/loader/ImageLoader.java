@@ -2,6 +2,7 @@ package com.sinothk.helper.image.loader;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Looper;
@@ -20,7 +21,9 @@ import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.bumptech.glide.request.target.Target;
+import com.sinothk.helper.image.utils.ImageUtil;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -227,10 +230,9 @@ public class ImageLoader {
                         }
 
                         @Override
-                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                            Log.e("loadNetImgWithResize", "onResourceReady---> " + resource);
-                            onLoadListener.onResourceReady(resource, model);
-
+                        public boolean onResourceReady(Drawable drawable, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            Log.e("loadNetImgWithResize", "onResourceReady---> " + drawable);
+                            onLoadListener.onResourceReady(drawable, model);
                             return false;
                         }
                     })
